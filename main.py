@@ -19,11 +19,13 @@ def retrieve(query: str, docs, mode: str, topk: int):
     elif mode == "dense":
         if not _HAS_DENSE:
             raise RuntimeError("Dense mode needs 'sentence-transformers' and 'faiss-cpu' installed.")
+
         dense = DenseRetriever(docs)
         return dense.search(query, k=topk)
     elif mode == "hybrid":
         if not _HAS_DENSE:
             raise RuntimeError("Hybrid mode needs 'sentence-transformers' and 'faiss-cpu' installed.")
+            
         bm25 = BM25Retriever(docs)
         dense = DenseRetriever(docs)
         b = bm25.search(query, k=topk)
