@@ -1,0 +1,2 @@
+Linear Algebra
+With numpy.linalg you can compute norms, eigenvalues, and solve linear systems. Matrix multiply uses the @ operator.

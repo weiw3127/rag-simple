@@ -1,0 +1,2 @@
+Broadcasting in NumPy
+Broadcasting lets arrays of different shapes work together in arithmetic by expanding dimensions on the fly, avoiding explicit copies.
