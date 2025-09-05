@@ -1,7 +1,7 @@
 from typing import List, Dict
 
 def build_prompt(question: str, contexts: List[str]) -> str:
-    header = "Answer using ONLY the context. Cite as [#]. If unsure, say 'I don't know.'\n\n"
+    header = "Answer using ONLY the context. Cite as [#]."
     ctx = "\n\n".join([f"[{i+1}] " + c for i, c in enumerate(contexts)])
     return header + ctx + f"\n\nQuestion: {question}\nAnswer:"
 

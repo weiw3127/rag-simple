@@ -1,4 +1,3 @@
 rank-bm25>=0.2.2
-# Optional for dense/hybrid mode:
 sentence-transformers>=2.7.0
 faiss-cpu>=1.8.0

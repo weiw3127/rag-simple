@@ -1,7 +1,6 @@
 import argparse
-from raglib.ingest import load_txt_documents
-from raglib.bm25 import BM25Retriever
-from raglib.generate import stub_answer
+from raglib import load_txt_documents, BM25Retriever, DenseRetriever, rrf_fuse
+
 
 # Optional imports for dense/hybrid
 try:
